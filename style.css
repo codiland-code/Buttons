@@ -1,0 +1,90 @@
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.button{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    position: relative;
+    padding: 24px 48px;
+    overflow: hidden;
+}
+
+.button::before{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 28px;
+    width: 28px;
+    border-left: 2px solid #0fafa7;
+    border-bottom: 2px solid #0fafa7;
+    content: "";
+    border-radius: 0 4px 0 0;
+    -webkit-transition: all,.5s;
+    -o-transition: all,.5s;
+    transition: all,.5s;
+}
+
+.button::after{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 28px;
+    width: 28px;
+    border-right: 2px solid #0fafa7;
+    border-top: 2px solid #0fafa7;
+    content: "";
+    border-radius: 0 4px 0 0;
+    -webkit-transition: all,.5s;
+    -o-transition: all,.5s;
+    transition: all,.5s;
+}
+
+.button:hover::after,
+.button:hover::before{
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+.button_underline{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    position: relative;
+    margin: 0 16px;
+    padding: 0 ;
+}
+
+.button_underline::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #0fafa7;
+    content: "";
+    -webkit-transition: all, 0.4s;
+    -o-transition: all, 0.4s;
+    transition: all, 0.4s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.button_underline:hover::after{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
