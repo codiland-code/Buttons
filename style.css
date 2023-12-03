@@ -54,37 +54,3 @@ a{
   width: 100%;
 }
 
-
-
-
-
-.button_underline{
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: sans-serif;
-    position: relative;
-    margin: 0 16px;
-    padding: 0 ;
-}
-
-.button_underline::after{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background: #0fafa7;
-    content: "";
-    -webkit-transition: all, 0.4s;
-    -o-transition: all, 0.4s;
-    transition: all, 0.4s;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-}
-
-.button_underline:hover::after{
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
