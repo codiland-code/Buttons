@@ -20,8 +20,48 @@ a{
     transition: all 0.3s ease-out;
 }
 
-.button:hover {
-    box-shadow: inset 12em 0 #000;
-    cursor: pointer;
+.button {
+    position: relative;
+    z-index: 1;
+    background: #12A29C;
+}
+
+.button::before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    background: #000;
     color: #fff;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+}
+
+.button::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    right: 0;
+    top: 0;
+    background: #000;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover:before {
+    width: 0;
+}
+
+.button:hover:after {
+    width: 0;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: #000;
 }
